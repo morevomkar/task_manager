@@ -491,20 +491,7 @@ with st.sidebar:
     
     st.markdown("---")
     
-    # Category breakdown
-    st.markdown("### 📁 By Category")
-    if st.session_state.events:
-        category_counts = {}
-        for event in st.session_state.events:
-            cat = event['category']
-            category_counts[cat] = category_counts.get(cat, 0) + 1
-        
-        for category, count in category_counts.items():
-            st.markdown(f"{CATEGORIES[category]} **{category}**: {count}")
-    else:
-        st.info("No events yet")
-    
-    st.markdown("---")
+   
     
     # Priority breakdown
     st.markdown("### 🎯 By Priority")
